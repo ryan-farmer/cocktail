@@ -24,7 +24,7 @@
 
         _.each(mixins, function(mixin) {
             if (_.isString(mixin)) {
-                mixin = Cocktail.mixins[mixin];
+                mixin = _.result(Cocktail.mixins, mixin);
             }
             _.each(mixin, function(value, key) {
                 if (_.isFunction(value)) {
